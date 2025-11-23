@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLink | AI-Powered Farm-to-Table</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Merriweather', serif; }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom Gradients */
+        .hero-bg {
+            background: linear-gradient(rgba(20, 83, 45, 0.8), rgba(20, 83, 45, 0.7)), url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-slate-50">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-leaf text-green-600 text-2xl"></i>
+                <span class="text-xl font-bold text-green-800 tracking-tight">FreshLink</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#how-it-works" class="hover:text-green-600 transition">How it Works</a>
+                <a href="#farmers" class="hover:text-green-600 transition">Our Farmers</a>
+                <a href="#business" class="hover:text-green-600 transition">For Restaurants</a>
+            </div>
+            <button class="bg-green-600 hover:bg-green-700 text-white px-5 py-2 rounded-full text-sm font-semibold transition shadow-lg shadow-green-600/20">
+                Get App
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center px-4 relative">
+        <div class="max-w-4xl mx-auto text-white z-10 mt-16">
+            <div class="inline-block bg-green-500/20 backdrop-blur-md border border-green-400/30 px-4 py-1 rounded-full text-sm font-medium mb-6">
+                🚀 Launching Soon in Metro Manila
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+                Fresh from farm to you<br>
+                <span class="text-green-300">in hours, not days.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-200 mb-10 max-w-2xl mx-auto font-light">
+                The AI-powered platform connecting you directly to local farmers. No middlemen. No wilted veggies. Just honest food.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-green-500 hover:bg-green-400 text-white px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-apple"></i> Download for iOS
+                </button>
+                <button class="bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-full font-bold text-lg transition transform hover:scale-105 shadow-xl flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-google-play"></i> Get for Android
+                </button>
+            </div>
+            <p class="mt-6 text-sm text-slate-300 opacity-80">First order delivery is free! • Cancel anytime</p>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 animate-bounce text-white/50">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- The Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-24 h-24 bg-yellow-100 rounded-full -z-10"></div>
+                    <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresh Vegetables" class="rounded-2xl shadow-2xl border-8 border-slate-50">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-xl max-w-xs border border-slate-100">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 p-3 rounded-full text-red-600">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-800">Did you know?</p>
+                                <p class="text-xs text-slate-600 mt-1">Grocery store veggies are often 2 weeks old before you buy them.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Stop paying for "Zombie Vegetables"</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        You want healthy food, but the current system is broken. Produce travels hundreds of kilometers, sits in hot trucks, and loses nutrients every hour.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 w-6"></i>
+                            <span class="text-slate-600">Grocery stores: 7-14 days from harvest</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-xmark text-red-500 w-6"></i>
+                            <span class="text-slate-600">Multiple middlemen hiking up prices</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-green-500 w-6"></i>
+                            <span class="text-slate-900 font-bold">FreshLink: Harvested this morning. Delivered today.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (AI Section) -->
+    <section id="how-it-works" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Powered by Smart Technology</h2>
+                <p class="text-slate-600">We use Artificial Intelligence to predict what you want before the farmer even picks it. Less waste, more freshness.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-bl-lg">STEP 1</div>
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">You Order</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Browse 120+ items on the app. Our AI forecasts demand so farmers know exactly what to harvest.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-bl-lg">STEP 2</div>
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">We Optimize</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Our smart routing algorithms find the fastest path from the farm to your doorstep, skipping warehouses.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-bl-lg">STEP 3</div>
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center text-green-600 text-2xl mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-carrot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">You Eat Fresh</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Receive your box within hours of harvest. Track your rider in real-time on the map.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section (Lolo Ben) -->
+    <section id="farmers" class="py-20 bg-green-900 text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block bg-green-800 px-4 py-1 rounded-full text-xs font-bold mb-6 tracking-wider uppercase text-green-200">Farmer Spotlight</div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 serif">Meet Lolo Ben</h2>
+                    <p class="text-green-100 text-lg mb-6 leading-relaxed">
+                        For 20 years, Lolo Ben sold his tomatoes to traders for ₱5/kilo. He barely broke even.
+                    </p>
+                    <p class="text-green-100 text-lg mb-8 leading-relaxed">
+                        Today, with FreshLink, he sells directly to you. He earns fair market prices, and you get tomatoes that actually taste like tomatoes.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400">20+</div>
+                            <div class="text-xs text-green-300 uppercase tracking-wide">Partner Farmers</div>
+                        </div>
+                        <div class="w-px h-10 bg-green-700"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-yellow-400">₱400k</div>
+                            <div class="text-xs text-green-300 uppercase tracking-wide">Farmer Revenue</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Placeholder for Farmer Image -->
+                    <div class="aspect-square rounded-2xl overflow-hidden border-4 border-green-700 shadow-2xl bg-slate-800 relative group">
+                        <img src="https://images.unsplash.com/photo-1595246515798-e9676e16737b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lolo Ben Farmer" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                        <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                            <p class="font-bold text-white">Ben, Batangas</p>
+                            <p class="text-xs text-green-300">FreshLink Partner since 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Portal (B2B) Section -->
+    <section id="business" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="bg-slate-900 rounded-3xl p-8 md:p-16 text-center md:text-left relative overflow-hidden">
+                <!-- Decorative Circles -->
+                <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-green-500 rounded-full blur-3xl opacity-20"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Own a Restaurant?</h2>
+                        <p class="text-slate-300 mb-8 text-lg">Streamline your kitchen's supply chain. Get consistent, high-quality produce delivered daily with our B2B Partner Portal.</p>
+                        <ul class="space-y-3 mb-8 text-slate-300">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Automated Inventory Ordering</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Contract Pricing</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Net-30 Payment Terms</li>
+                        </ul>
+                        <button class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-green-50 transition">
+                            Request Business Access
+                        </button>
+                    </div>
+                    <div class="hidden md:block">
+                        <!-- Abstract Illustration of Dashboard -->
+                        <div class="bg-slate-800 rounded-xl p-4 shadow-2xl border border-slate-700 transform rotate-2 hover:rotate-0 transition duration-500">
+                            <div class="flex gap-2 mb-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-8 bg-slate-700 rounded w-1/3"></div>
+                                <div class="h-32 bg-slate-700 rounded w-full"></div>
+                                <div class="flex gap-3">
+                                    <div class="h-20 bg-slate-700 rounded w-1/2"></div>
+                                    <div class="h-20 bg-slate-700 rounded w-1/2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing/Subscription -->
+    <section class="py-20 bg-slate-50 text-center">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12">Simple Pricing</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Free Tier -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pay As You Go</h3>
+                    <div class="text-4xl font-bold text-slate-900 mb-6">₱0<span class="text-sm text-slate-500 font-normal">/mo</span></div>
+                    <ul class="text-left space-y-3 mb-8 text-slate-600">
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Access to marketplace</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> Standard Delivery Fees</li>
+                        <li><i class="fa-solid fa-check text-green-500 mr-2"></i> 120+ Fresh Items</li>
+                    </ul>
+                    <button class="w-full border-2 border-green-600 text-green-600 font-bold py-3 rounded-xl hover:bg-green-50 transition">Download App</button>
+                </div>
+                <!-- Subscription Tier -->
+                <div class="bg-green-50 p-8 rounded-2xl shadow-lg border border-green-200 relative">
+                    <div class="absolute top-0 right-0 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                    <h3 class="text-xl font-bold text-green-900 mb-2">FreshLink Prime</h3>
+                    <div class="text-4xl font-bold text-green-800 mb-6">₱249<span class="text-sm text-green-600 font-normal">/mo</span></div>
+                    <ul class="text-left space-y-3 mb-8 text-slate-700">
+                        <li><i class="fa-solid fa-check text-green-600 mr-2"></i> <strong>Unlimited Free Delivery</strong></li>
+                        <li><i class="fa-solid fa-check text-green-600 mr-2"></i> Priority Rush Shipping</li>
+                        <li><i class="fa-solid fa-check text-green-600 mr-2"></i> Exclusive Seasonal Items</li>
+                    </ul>
+                    <button class="w-full bg-green-600 text-white font-bold py-3 rounded-xl hover:bg-green-700 transition">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-leaf text-green-500 text-xl"></i>
+                        <span class="text-xl font-bold text-white tracking-tight">FreshLink</span>
+                    </div>
+                    <p class="max-w-xs text-sm">Building a sustainable, tech-powered food ecosystem. Bringing the farm closer to every home.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-green-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Our Farmers</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-envelope mr-2"></i> team@freshlink.ai</li>
+                        <li><i class="fa-brands fa-instagram mr-2"></i> @freshlink.ai</li>
+                        <li><i class="fa-brands fa-tiktok mr-2"></i> @freshlink.ai</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+                <p>&copy; 2025 FreshLink Philippines. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Scroll Animation for Navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+    </script>
+</body>
+</html>
